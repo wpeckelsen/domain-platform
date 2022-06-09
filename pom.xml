@@ -10,7 +10,7 @@
     </parent>
     <groupId>nl.wessel</groupId>
     <artifactId>Domain_Platform</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1</version>
     <name>Domain_Platform</name>
     <description>Domain_Platform</description>
     <properties>
