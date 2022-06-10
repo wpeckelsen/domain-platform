@@ -1,34 +1,26 @@
-package nl.wessel.domain_platform.B.BusinessLogic.Model;
+package nl.wessel.domain_platform.B.BusinessLogic.DTO.Publisher;
 
-import javax.persistence.*;
+import nl.wessel.domain_platform.B.BusinessLogic.Model.Deal;
+import nl.wessel.domain_platform.B.BusinessLogic.Model.Market;
+import nl.wessel.domain_platform.B.BusinessLogic.Model.Order;
+
+import javax.persistence.Column;
 import java.util.List;
 
-
-@Entity
-public class Client {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long clientID;
-
-    @Column(length = 50)
+public class CreatedPublisher {
+    private Long publisherID;
     private String name;
-
-    @Column(length = 50)
     private String email;
-
-    @Column(length = 500)
     private String password;
-
     private List<Deal> doneDeals;
     private List<Order> orders;
     private List<Market> markets;
 
-    public Long getClientID() {
-        return clientID;
+    public Long getPublisherID() {
+        return publisherID;
     }
-    public void setClientID(Long clientID) {
-        this.clientID = clientID;
+    public void setPublisherID(Long publisherID) {
+        this.publisherID = publisherID;
     }
     public String getName() {
         return name;

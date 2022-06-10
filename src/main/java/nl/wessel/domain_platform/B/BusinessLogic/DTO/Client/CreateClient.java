@@ -1,10 +1,10 @@
-package nl.wessel.domain_platform.B.BusinessLogic.DTO.Publisher;
+package nl.wessel.domain_platform.B.BusinessLogic.DTO.Client;
 
-public class DtoPublisher {
+public class CreateClient {
+
     private String name;
     private String email;
     private String password;
-
 
     public String getName() {
         return name;

@@ -1,25 +1,20 @@
-package nl.wessel.domain_platform.B.BusinessLogic.Model;
+package nl.wessel.domain_platform.B.BusinessLogic.DTO.Client;
 
-import javax.persistence.*;
+import nl.wessel.domain_platform.B.BusinessLogic.Model.Deal;
+import nl.wessel.domain_platform.B.BusinessLogic.Model.Market;
+import nl.wessel.domain_platform.B.BusinessLogic.Model.Order;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.List;
 
-
-@Entity
-public class Client {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CreatedClient {
     private Long clientID;
-
-    @Column(length = 50)
     private String name;
-
-    @Column(length = 50)
     private String email;
-
-    @Column(length = 500)
     private String password;
-
     private List<Deal> doneDeals;
     private List<Order> orders;
     private List<Market> markets;
