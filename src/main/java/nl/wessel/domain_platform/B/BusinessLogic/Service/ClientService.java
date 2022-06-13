@@ -10,9 +10,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClientService {
 
-    ClientRepo clientRepo;
+   private final ClientRepo clientRepo;
+    public ClientService(ClientRepo clientRepo) {
+        this.clientRepo = clientRepo;
+    }
 
-//    new client
+    //    new client
     public CreatedClient newClient(CreateClient createClient){
         Client client = clientMaker(createClient);
         clientRepo.save(client);
