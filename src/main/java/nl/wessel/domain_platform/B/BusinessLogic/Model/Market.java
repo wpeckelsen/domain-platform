@@ -15,7 +15,7 @@ public class Market {
     private String name;
 
     @Column(length = 50)
-    private String TLDs;
+    private List<String> TLDs;
     private List<Client> clients;
     private List<Publisher> publishers;
 

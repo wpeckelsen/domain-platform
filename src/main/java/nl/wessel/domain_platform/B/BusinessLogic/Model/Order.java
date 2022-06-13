@@ -1,6 +1,7 @@
 package nl.wessel.domain_platform.B.BusinessLogic.Model;
 
 import javax.persistence.*;
+import java.net.URL;
 import java.util.Date;
 
 @Entity
@@ -16,7 +17,7 @@ public class Order {
     private String topic;
 
     @Column(length = 1000)
-    private String anchorLink;
+    private URL anchorLink;
 
     @Column(length = 50)
     private String language;

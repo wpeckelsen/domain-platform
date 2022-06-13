@@ -15,9 +15,16 @@ public class CreatedClient {
     private String name;
     private String email;
     private String password;
+
+//    TODO variables
     private List<Deal> doneDeals;
     private List<Order> orders;
     private List<Market> markets;
+
+
+
+
+
 
     public Long getClientID() {
         return clientID;
