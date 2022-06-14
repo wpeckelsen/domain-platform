@@ -27,11 +27,11 @@ public class DomainService {
 
     public CreatedDomain domainDtoMaker(Domain domain){
         CreatedDomain createdDomain = new CreatedDomain();
-        createdDomain.setDomainID(createdDomain.getDomainID());
-        createdDomain.setName(createdDomain.getName());
-        createdDomain.setTld(createdDomain.getTld());
-        createdDomain.setCategory(createdDomain.getCategory());
-        createdDomain.setPrice(createdDomain.getPrice());
+        createdDomain.setDomainID(domain.getDomainID());
+        createdDomain.setName(domain.getName());
+        createdDomain.setTld(domain.getTld());
+        createdDomain.setCategory(domain.getCategory());
+        createdDomain.setPrice(domain.getPrice());
         return createdDomain;
     }
 

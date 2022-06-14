@@ -22,6 +22,8 @@ public class ClientService {
         return clientDtoMaker(client);
     }
 
+
+
     public static CreatedClient clientDtoMaker(Client client){
         CreatedClient createdClient = new CreatedClient();
 
@@ -37,8 +39,6 @@ public class ClientService {
 
         return createdClient;
     }
-
-
     public static Client clientMaker(CreateClient createClient){
         Client client = new Client();
         client.setEmail(createClient.getEmail());

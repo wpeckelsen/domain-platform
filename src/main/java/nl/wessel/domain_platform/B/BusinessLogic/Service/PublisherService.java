@@ -21,21 +21,6 @@ public class PublisherService {
 
 
 
-    public Market marketMaker(CreateMarket createMarket){
-        Market market = new Market();
-        market.setName(createMarket.getName());
-        market.setTLDs(createMarket.getTLDs());
-        return market;
-    }
-    public CreatedMarket marketDtoMaker(Market market){
-        CreatedMarket createdMarket = new CreatedMarket();
-        createdMarket.setMarketID(market.getMarketID());
-        createdMarket.setName(market.getName());
-        createdMarket.setTLDs(market.getTLDs());
-        return createdMarket;
-    }
-
-
 
 
 
