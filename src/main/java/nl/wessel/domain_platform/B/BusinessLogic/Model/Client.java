@@ -27,6 +27,7 @@ public class Client {
     public Long getClientID() {
         return clientID;
     }
+
     public void setClientID(Long clientID) {
         this.clientID = clientID;
     }

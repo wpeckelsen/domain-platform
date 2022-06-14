@@ -5,20 +5,25 @@ import nl.wessel.domain_platform.B.BusinessLogic.DTO.Client.CreateClient;
 import nl.wessel.domain_platform.B.BusinessLogic.DTO.Client.CreatedClient;
 import nl.wessel.domain_platform.B.BusinessLogic.DTO.Deal.CreateDeal;
 import nl.wessel.domain_platform.B.BusinessLogic.DTO.Deal.CreatedDeal;
+import nl.wessel.domain_platform.B.BusinessLogic.Exception.RecordNotFound;
 import nl.wessel.domain_platform.B.BusinessLogic.Model.Client;
 import nl.wessel.domain_platform.B.BusinessLogic.Model.Deal;
 import nl.wessel.domain_platform.C.Repository.DealRepo;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class DealService {
 
     private final DealRepo dealRepo;
+
     public DealService(DealRepo dealRepo) {
         this.dealRepo = dealRepo;
     }
 
-    public static Deal dealMaker(CreateDeal createDeal){
+    public static Deal dealMaker(CreateDeal createDeal) {
         Deal deal = new Deal();
         deal.setDueDate(createDeal.getDueDate());
         deal.setPaymentType(createDeal.getPaymentType());
@@ -26,7 +31,8 @@ public class DealService {
         deal.setPrice(createDeal.getPrice());
         return deal;
     }
-    public static CreatedDeal dealDtoMaker(Deal deal){
+
+    public static CreatedDeal dealDtoMaker(Deal deal) {
         CreatedDeal createdDeal = new CreatedDeal();
         createdDeal.setDealID(deal.getDealID());
         createdDeal.setDueDate(deal.getDueDate());
@@ -34,5 +40,66 @@ public class DealService {
         createdDeal.setPaymentType(deal.getPaymentType());
         createdDeal.setTerms(deal.getTerms());
         return createdDeal;
+    }
+
+    //    CREATE
+    public CreatedDeal newDeal(CreateDeal createDeal) {
+        Deal deal = dealMaker(createDeal);
+        dealRepo.save(deal);
+        return dealDtoMaker(deal);
+    }
+
+
+    //    READ
+    public List<CreatedDeal> getList() {
+        List<Deal> dealList = dealRepo.findAll();
+        List<CreatedDeal> createdDealList = new ArrayList<>();
+
+        for (Deal deal : dealList) {
+            CreatedDeal createdDeal = dealDtoMaker(deal);
+            createdDealList.add(createdDeal);
+        }
+        return createdDealList;
+    }
+
+    public List<CreatedDeal> getListByName(String name) {
+        List<Deal> dealList = dealRepo.findDealsByName(name);
+        List<CreatedDeal> createdDealList = new ArrayList<>();
+
+        for (Deal deal : dealList) {
+            CreatedDeal createdDeal = dealDtoMaker(deal);
+            createdDealList.add(createdDeal);
+        }
+        return createdDealList;
+    }
+
+    public CreatedDeal getListByID(Long dealID) {
+        if (dealRepo.findById(dealID).isPresent()) {
+            Deal deal = dealRepo.findById(dealID).get();
+            return dealDtoMaker(deal);
+        } else {
+            throw new RecordNotFound("Could not find that deal");
+        }
+    }
+
+
+    //    update
+    public CreatedDeal update(Long identityCode, CreateDeal createDeal) {
+        if (dealRepo.findById(identityCode).isPresent()) {
+            Deal deal = dealRepo.findById(identityCode).get();
+            Deal deal1 = dealMaker(createDeal);
+
+
+            deal1.setDealID(deal.getDealID());
+            dealRepo.save(deal1);
+            return dealDtoMaker(deal1);
+        } else {
+            throw new RecordNotFound("Could not find that deal ");
+        }
+    }
+
+    //    delete
+    public void deleteById(Long identityCode) {
+        dealRepo.deleteById(identityCode);
     }
 }
