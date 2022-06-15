@@ -9,10 +9,15 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>nl.wessel</groupId>
-    <artifactId>Domain_Platform</artifactId>
+<!--    <artifactId>Domain_Platform</artifactId>-->
+    <artifactId>Platform</artifactId>
     <version>1</version>
-    <name>Domain_Platform</name>
-    <description>Domain_Platform</description>
+    <name>Platform</name>
+    <description>Platform</description>
+
+<!--    <name>Domain_Platform</name>-->
+<!--    <description>Domain_Platform</description>-->
+
     <properties>
         <java.version>17</java.version>
     </properties>
