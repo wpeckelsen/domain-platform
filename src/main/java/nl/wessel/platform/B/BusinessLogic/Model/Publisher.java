@@ -19,8 +19,13 @@ public class Publisher {
     @Column(length = 500)
     private String password;
 
+    @OneToMany
     private List<Deal> doneDeals;
+
+    @OneToMany
     private List<Order> orders;
+
+    @ManyToMany
     private List<Market> markets;
 
 

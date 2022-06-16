@@ -22,7 +22,8 @@ public class Order {
     @Column(length = 50)
     private String language;
 
-    private Market market;
+
+
 
     public Long getOrderID() {
         return orderID;
@@ -72,11 +73,7 @@ public class Order {
         this.language = language;
     }
 
-    public Market getMarket() {
-        return market;
-    }
 
-    public void setMarket(Market market) {
-        this.market = market;
-    }
+
+
 }

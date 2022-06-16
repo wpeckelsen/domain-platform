@@ -4,11 +4,15 @@ package nl.wessel.platform.B.BusinessLogic.Service;
 import nl.wessel.platform.B.BusinessLogic.DTO.Deal.CreateDeal;
 import nl.wessel.platform.B.BusinessLogic.DTO.Deal.CreatedDeal;
 import nl.wessel.platform.B.BusinessLogic.Exception.RecordNotFound;
+import nl.wessel.platform.B.BusinessLogic.Model.Client;
 import nl.wessel.platform.B.BusinessLogic.Model.Deal;
+import nl.wessel.platform.B.BusinessLogic.Model.Domain;
+import nl.wessel.platform.B.BusinessLogic.Model.Publisher;
 import nl.wessel.platform.C.Repository.DealRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -37,6 +41,10 @@ public class DealService {
         createdDeal.setPaymentType(deal.getPaymentType());
         createdDeal.setTerms(deal.getTerms());
         return createdDeal;
+
+
+
+
     }
 
     //    CREATE

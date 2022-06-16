@@ -19,9 +19,11 @@ public class Deal {
     @Column(length = 2000)
     private String terms;
 
-
+    @OneToOne
     private Publisher publisher;
+    @OneToOne
     private Domain domain;
+    @OneToOne
     private Client client;
 
 

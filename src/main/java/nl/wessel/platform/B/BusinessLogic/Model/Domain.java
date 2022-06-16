@@ -20,6 +20,7 @@ public class Domain {
 
     private int price;
 
+    @ManyToOne
     private Publisher publisher;
 
     public Long getDomainID() {

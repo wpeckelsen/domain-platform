@@ -20,7 +20,7 @@ public class ClientService {
         this.clientRepo = clientRepo;
     }
 
-    public static CreatedClient clientDtoMaker(Client client){
+    public static CreatedClient clientDtoMaker(Client client) {
         CreatedClient createdClient = new CreatedClient();
 
 
@@ -34,9 +34,11 @@ public class ClientService {
         createdClient.setDoneDeals(client.getDoneDeals());
 
         return createdClient;
+
+
     }
 
-    public static Client clientMaker(CreateClient createClient){
+    public static Client clientMaker(CreateClient createClient) {
         Client client = new Client();
         client.setEmail(createClient.getEmail());
         client.setName(createClient.getName());
@@ -46,7 +48,7 @@ public class ClientService {
 
 
     //    CREATE
-    public CreatedClient newClient(CreateClient createClient){
+    public CreatedClient newClient(CreateClient createClient) {
         Client client = clientMaker(createClient);
         clientRepo.save(client);
         return clientDtoMaker(client);
@@ -54,15 +56,15 @@ public class ClientService {
 
     //    READ
     public List<CreatedClient> getList() {
-    List<Client> clientList = clientRepo.findAll();
-    List<CreatedClient> createdClientList = new ArrayList<>();
+        List<Client> clientList = clientRepo.findAll();
+        List<CreatedClient> createdClientList = new ArrayList<>();
 
-    for (Client client : clientList) {
-        CreatedClient createdClient = clientDtoMaker(client);
-        createdClientList.add(createdClient);
+        for (Client client : clientList) {
+            CreatedClient createdClient = clientDtoMaker(client);
+            createdClientList.add(createdClient);
+        }
+        return createdClientList;
     }
-    return createdClientList;
-}
 
     public List<CreatedClient> getListByName(String name) {
         List<Client> clientList = clientRepo.findClientsByName(name);
@@ -86,7 +88,6 @@ public class ClientService {
     }
 
 
-
     //    update
     public CreatedClient update(Long clientID, CreateClient createClient) {
 
@@ -107,8 +108,8 @@ public class ClientService {
     //    delete
 
     public void deleteById(Long clientID) {
-    clientRepo.deleteById(clientID);
-}
+        clientRepo.deleteById(clientID);
+    }
 
 
 }

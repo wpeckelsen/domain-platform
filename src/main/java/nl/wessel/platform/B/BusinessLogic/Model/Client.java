@@ -20,16 +20,16 @@ public class Client {
     @Column(length = 500)
     private String password;
 
+    @OneToMany
     private List<Deal> doneDeals;
+    @OneToMany
     private List<Order> orders;
+    @ManyToMany
     private List<Market> markets;
-
-
 
     public Long getClientID() {
         return clientID;
     }
-
     public void setClientID(Long clientID) {
         this.clientID = clientID;
     }

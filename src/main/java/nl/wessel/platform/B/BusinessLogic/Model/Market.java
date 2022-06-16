@@ -2,7 +2,9 @@ package nl.wessel.platform.B.BusinessLogic.Model;
 
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Market {
@@ -15,8 +17,16 @@ public class Market {
     private String name;
 
     @Column(length = 50)
-    private List<String> TLDs;
+    @ManyToMany
+    private Set<String> TLDs;
+
+
+
+    @Column(length = 50)
+    @ManyToMany
     private List<Client> clients;
+
+    @ManyToMany
     private List<Publisher> publishers;
 
 
