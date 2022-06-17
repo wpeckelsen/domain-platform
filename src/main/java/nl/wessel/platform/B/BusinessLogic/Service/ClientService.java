@@ -6,6 +6,7 @@ import nl.wessel.platform.B.BusinessLogic.DTO.Client.CreatedClient;
 import nl.wessel.platform.B.BusinessLogic.Exception.RecordNotFound;
 import nl.wessel.platform.B.BusinessLogic.Model.Client;
 import nl.wessel.platform.C.Repository.ClientRepo;
+import nl.wessel.platform.C.Repository.DealRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,9 +16,11 @@ import java.util.List;
 public class ClientService {
 
     private final ClientRepo clientRepo;
+    private final DealRepo dealRepo;
 
-    public ClientService(ClientRepo clientRepo) {
+    public ClientService(ClientRepo clientRepo, DealRepo dealRepo) {
         this.clientRepo = clientRepo;
+        this.dealRepo = dealRepo;
     }
 
     public static CreatedClient clientDtoMaker(Client client) {
@@ -112,6 +115,22 @@ public class ClientService {
     }
 
 
+//    assign to
+
+    public CreatedClient clientwithDeals(Long clientID, Long dealID){
+
+        var optionalClient = clientRepo.findById(clientID);
+        var client = optionalClient.get();
+
+        var optionalDeal = dealRepo.findById(dealID);
+        var deal = optionalDeal.get();
+
+
+
+        client.setDeals(optionalDeal);
+        clientRepo.save(deal);
+        return clientDtoMaker(client);
+    }
 }
 
 

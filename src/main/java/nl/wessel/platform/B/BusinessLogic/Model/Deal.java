@@ -25,7 +25,8 @@ public class Deal {
     @OneToOne
     private Domain domain;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "deal")
     private Client client;
 
 

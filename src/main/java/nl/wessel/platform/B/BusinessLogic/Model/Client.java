@@ -20,7 +20,7 @@ public class Client {
     @Column(length = 500)
     private String password;
 
-    @OneToMany
+    @OneToMany(mappedBy = "client")
     private List<Deal> deals;
 
     @OneToMany

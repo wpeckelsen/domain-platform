@@ -9,18 +9,18 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>nl.wessel</groupId>
-<!--    <artifactId>Domain_Platform</artifactId>-->
     <artifactId>Platform</artifactId>
     <version>1</version>
     <name>Platform</name>
     <description>Platform</description>
 
-<!--    <name>Domain_Platform</name>-->
-<!--    <description>Domain_Platform</description>-->
 
     <properties>
+
         <java.version>17</java.version>
+
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,8 +49,8 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
         </dependency>
-
 
 
     </dependencies>

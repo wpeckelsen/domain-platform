@@ -22,7 +22,7 @@ public class Order {
     @Column(length = 50)
     private String language;
 
-    @Column
+
     @ManyToOne
     Client client;
 
