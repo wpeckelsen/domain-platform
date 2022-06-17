@@ -25,7 +25,7 @@ public class DomainService {
     public Domain domainMaker(CreateDomain createDomain){
         Domain domain = new Domain();
         domain.setName(createDomain.getName());
-        domain.setTld(createDomain.getTld());
+        domain.setTLD(createDomain.getTLD());
         domain.setCategory(createDomain.getCategory());
         domain.setPrice(createDomain.getPrice());
         return domain;
@@ -35,7 +35,7 @@ public class DomainService {
         CreatedDomain createdDomain = new CreatedDomain();
         createdDomain.setDomainID(domain.getDomainID());
         createdDomain.setName(domain.getName());
-        createdDomain.setTld(domain.getTld());
+        createdDomain.setTLD(domain.getTLD());
         createdDomain.setCategory(domain.getCategory());
         createdDomain.setPrice(domain.getPrice());
         return createdDomain;

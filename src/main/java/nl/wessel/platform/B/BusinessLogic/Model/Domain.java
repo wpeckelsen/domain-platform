@@ -13,7 +13,7 @@ public class Domain {
     private String name;
 
     @Column(length = 50)
-    private String tld;
+    private String TLD;
 
     @Column(length = 50)
     private String category;
@@ -39,12 +39,12 @@ public class Domain {
         this.name = name;
     }
 
-    public String getTld() {
-        return tld;
+    public String getTLD() {
+        return TLD;
     }
 
-    public void setTld(String tld) {
-        this.tld = tld;
+    public void setTLD(String TLD) {
+        this.TLD = TLD;
     }
 
     public String getCategory() {

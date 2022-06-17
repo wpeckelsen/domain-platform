@@ -31,7 +31,7 @@ public class ClientService {
 
         createdClient.setMarkets(client.getMarkets());
         createdClient.setOrders(client.getOrders());
-        createdClient.setDoneDeals(client.getDoneDeals());
+        createdClient.setDeals(client.getDeals());
 
         return createdClient;
 

@@ -11,7 +11,7 @@ public class CreatedMarket {
     private String name;
 
 //    TODO
-    private List<String> TLDs;
+    private String TLD;
     private List<Client> clients;
     private List<Publisher> publishers;
 
@@ -32,12 +32,12 @@ public class CreatedMarket {
         this.name = name;
     }
 
-    public List<String> getTLDs() {
-        return TLDs;
+    public String getTLD() {
+        return TLD;
     }
 
-    public void setTLDs(List<String> TLDs) {
-        this.TLDs = TLDs;
+    public void setTLD(String TLD) {
+        this.TLD = TLD;
     }
 
     public List<Client> getClients() {

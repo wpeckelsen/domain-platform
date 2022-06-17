@@ -7,7 +7,7 @@ public class CreatedDomain {
 
     private Long domainID;
     private String name;
-    private String tld;
+    private String TLD;
     private String category;
     private int price;
 
@@ -31,12 +31,12 @@ public class CreatedDomain {
         this.name = name;
     }
 
-    public String getTld() {
-        return tld;
+    public String getTLD() {
+        return TLD;
     }
 
-    public void setTld(String tld) {
-        this.tld = tld;
+    public void setTLD(String TLD) {
+        this.TLD = TLD;
     }
 
     public String getCategory() {

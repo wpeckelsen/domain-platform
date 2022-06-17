@@ -20,7 +20,7 @@ public class Publisher {
     private String password;
 
     @OneToMany
-    private List<Deal> doneDeals;
+    private List<Deal> deals;
 
     @OneToMany
     private List<Order> orders;
@@ -61,12 +61,12 @@ public class Publisher {
         this.password = password;
     }
 
-    public List<Deal> getDoneDeals() {
-        return doneDeals;
+    public List<Deal> getDeals() {
+        return deals;
     }
 
-    public void setDoneDeals(List<Deal> doneDeals) {
-        this.doneDeals = doneDeals;
+    public void setDeals(List<Deal> deals) {
+        this.deals = deals;
     }
 
     public List<Order> getOrders() {

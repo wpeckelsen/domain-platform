@@ -21,9 +21,11 @@ public class Deal {
 
     @OneToOne
     private Publisher publisher;
+
     @OneToOne
     private Domain domain;
-    @OneToOne
+
+    @ManyToOne
     private Client client;
 
 

@@ -11,7 +11,7 @@ public class CreatedPublisher {
     private String name;
     private String email;
     private String password;
-    private List<Deal> doneDeals;
+    private List<Deal> deals;
     private List<Order> orders;
     private List<Market> markets;
 
@@ -39,11 +39,11 @@ public class CreatedPublisher {
     public void setPassword(String password) {
         this.password = password;
     }
-    public List<Deal> getDoneDeals() {
-        return doneDeals;
+    public List<Deal> getDeals() {
+        return deals;
     }
-    public void setDoneDeals(List<Deal> doneDeals) {
-        this.doneDeals = doneDeals;
+    public void setDeals(List<Deal> deals) {
+        this.deals = deals;
     }
     public List<Order> getOrders() {
         return orders;

@@ -13,7 +13,7 @@ public class CreatedClient {
     private String password;
 
 //    TODO variables
-    private List<Deal> doneDeals;
+    private List<Deal> deals;
     private List<Order> orders;
     private List<Market> markets;
 
@@ -46,11 +46,11 @@ public class CreatedClient {
     public void setPassword(String password) {
         this.password = password;
     }
-    public List<Deal> getDoneDeals() {
-        return doneDeals;
+    public List<Deal> getDeals() {
+        return deals;
     }
-    public void setDoneDeals(List<Deal> doneDeals) {
-        this.doneDeals = doneDeals;
+    public void setDeals(List<Deal> deals) {
+        this.deals = deals;
     }
     public List<Order> getOrders() {
         return orders;

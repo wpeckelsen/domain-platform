@@ -8,7 +8,7 @@ import java.util.List;
 public class CreateMarket {
 
     private String name;
-    private List<String> TLDs;
+    private String TLD;
 
 //    TODO
     private List<Client> clients;
@@ -23,12 +23,12 @@ public class CreateMarket {
         this.name = name;
     }
 
-    public List<String> getTLDs() {
-        return TLDs;
+    public String getTLD() {
+        return TLD;
     }
 
-    public void setTLDs(List<String> TLDs) {
-        this.TLDs = TLDs;
+    public void setTLD(String TLD) {
+        this.TLD = TLD;
     }
 
     public List<Client> getClients() {

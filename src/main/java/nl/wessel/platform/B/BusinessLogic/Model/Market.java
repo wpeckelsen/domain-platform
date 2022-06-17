@@ -17,10 +17,7 @@ public class Market {
     private String name;
 
     @Column(length = 50)
-    @ManyToMany
-    private Set<String> TLDs;
-
-
+    private String TLD;
 
     @Column(length = 50)
     @ManyToMany
@@ -46,12 +43,12 @@ public class Market {
         this.name = name;
     }
 
-    public List<String> getTLDs() {
-        return TLDs;
+    public String getTLD() {
+        return TLD;
     }
 
-    public void setTLDs(List<String> TLDs) {
-        this.TLDs = TLDs;
+    public void setTLD(String TLD) {
+        this.TLD = TLD;
     }
 
     public List<Client> getClients() {
