@@ -127,7 +127,8 @@ public class ClientService {
 
 
 
-        client.setDeals(optionalDeal);
+
+        client.setDeals();
         clientRepo.save(deal);
         return clientDtoMaker(client);
     }

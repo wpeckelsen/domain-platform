@@ -19,15 +19,20 @@ public class Deal {
     @Column(length = 2000)
     private String terms;
 
-    @OneToOne
-    private Publisher publisher;
 
     @OneToOne
     private Domain domain;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "deal")
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "client_clientID")
+    @MapsId("clientID")
     private Client client;
+
+    @ManyToOne
+    @MapsId("publisherID")
+    @JoinColumn(name = "publisher_publisherID")
+    private Publisher publisher;
 
 
     public Long getDealID() {

@@ -18,9 +18,10 @@ public class CreatedDeal {
 
 
 //    TODO
+    private Client client;
+
     private Publisher publisher;
     private Domain domain;
-    private Client client;
 
 
     public Long getDealID() {

@@ -4,6 +4,7 @@ import nl.wessel.platform.B.BusinessLogic.Model.Deal;
 import nl.wessel.platform.B.BusinessLogic.Model.Market;
 import nl.wessel.platform.B.BusinessLogic.Model.Order;
 
+import java.util.Collection;
 import java.util.List;
 
 public class CreatedClient {
@@ -13,7 +14,8 @@ public class CreatedClient {
     private String password;
 
 //    TODO variables
-    private List<Deal> deals;
+    private Collection<Deal> deals;
+
     private List<Order> orders;
     private List<Market> markets;
 
@@ -46,10 +48,10 @@ public class CreatedClient {
     public void setPassword(String password) {
         this.password = password;
     }
-    public List<Deal> getDeals() {
+    public Collection<Deal> getDeals() {
         return deals;
     }
-    public void setDeals(List<Deal> deals) {
+    public void setDeals(Collection<Deal> deals) {
         this.deals = deals;
     }
     public List<Order> getOrders() {

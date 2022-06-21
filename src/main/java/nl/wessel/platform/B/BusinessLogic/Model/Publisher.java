@@ -1,6 +1,9 @@
 package nl.wessel.platform.B.BusinessLogic.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -19,8 +22,9 @@ public class Publisher {
     @Column(length = 500)
     private String password;
 
-    @OneToMany
-    private List<Deal> deals;
+    @OneToMany(mappedBy = "client")
+    @JsonIgnore
+    private Collection<Deal> deals;
 
     @OneToMany
     private List<Order> orders;
@@ -61,7 +65,7 @@ public class Publisher {
         this.password = password;
     }
 
-    public List<Deal> getDeals() {
+    public Collection<Deal> getDeals() {
         return deals;
     }
 

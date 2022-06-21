@@ -1,6 +1,11 @@
 package nl.wessel.platform.B.BusinessLogic.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 
@@ -21,7 +26,9 @@ public class Client {
     private String password;
 
     @OneToMany(mappedBy = "client")
-    private List<Deal> deals;
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @JsonIgnore
+    private Collection<Deal> deals;
 
     @OneToMany
     private List<Order> orders;
@@ -53,7 +60,7 @@ public class Client {
     public void setPassword(String password) {
         this.password = password;
     }
-    public List<Deal> getDeals() {
+    public Collection<Deal> getDeals() {
         return deals;
     }
     public void setDeals(List<Deal> deals) {
