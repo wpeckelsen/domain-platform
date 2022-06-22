@@ -53,7 +53,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        //JWT token authentication
+
         http
                 .csrf().disable()
                 .authorizeRequests()
@@ -62,6 +62,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/users/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/users/**").hasRole("ADMIN")
                 /*voeg de antmatchers toe voor admin(post en delete) en user (overige)*/
+//                TODO roles
                 .antMatchers("/authenticated").authenticated()
                 .antMatchers("/authenticate").permitAll()/*allen dit punt mag toegankelijk zijn voor niet ingelogde gebruikers*/
                 .anyRequest().permitAll()

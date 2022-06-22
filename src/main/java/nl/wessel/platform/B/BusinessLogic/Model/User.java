@@ -2,11 +2,12 @@ package nl.wessel.platform.B.BusinessLogic.Model;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-public class User {
+public class User implements Serializable {
 
     @Id
     @Column(nullable = false, unique = true)
@@ -31,8 +32,7 @@ public class User {
             orphanRemoval = true,
             fetch = FetchType.EAGER)
     private Set<Authority> authorities = new HashSet<>();
-    @Id
-    private Long id;
+
 
     public String getUsername() { return username; }
     public void setUsername(String username) {

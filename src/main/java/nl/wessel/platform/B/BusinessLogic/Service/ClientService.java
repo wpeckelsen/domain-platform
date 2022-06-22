@@ -117,21 +117,21 @@ public class ClientService {
 
 //    assign to
 
-    public CreatedClient clientwithDeals(Long clientID, Long dealID){
-
-        var optionalClient = clientRepo.findById(clientID);
-        var client = optionalClient.get();
-
-        var optionalDeal = dealRepo.findById(dealID);
-        var deal = optionalDeal.get();
-
-
-
-
-        client.setDeals();
-        clientRepo.save(deal);
-        return clientDtoMaker(client);
-    }
+//    public CreatedClient clientwithDeals(Long clientID, Long dealID){
+//
+//        var optionalClient = clientRepo.findById(clientID);
+//        var client = optionalClient.get();
+//
+//        var optionalDeal = dealRepo.findById(dealID);
+//        var deal = optionalDeal.get();
+//
+//
+//
+//
+//        client.setDeals();
+//        clientRepo.save(deal);
+//        return clientDtoMaker(client);
+//    }
 }
 
 

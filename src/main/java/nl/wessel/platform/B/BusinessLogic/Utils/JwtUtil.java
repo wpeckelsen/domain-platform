@@ -43,11 +43,12 @@ public class JwtUtil {
     }
 
     private String createToken(Map<String, Object> claims, String subject) {
+        long validTime = 864000000; // ten days
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(subject)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24 * 10))
+                .setExpiration(new Date(System.currentTimeMillis() + validTime ))
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
                 .compact();
     }

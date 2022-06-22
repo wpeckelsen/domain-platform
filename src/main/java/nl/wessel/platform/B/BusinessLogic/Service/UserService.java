@@ -7,6 +7,7 @@ import nl.wessel.platform.B.BusinessLogic.Model.Authority;
 import nl.wessel.platform.B.BusinessLogic.Model.User;
 import nl.wessel.platform.B.BusinessLogic.Utils.RandomStringGenerator;
 import nl.wessel.platform.C.Repository.UserRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class UserService {
     private final UserRepo userRepo;
 
 
+    @Autowired
     public UserService(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
