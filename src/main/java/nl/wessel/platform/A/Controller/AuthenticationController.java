@@ -1,6 +1,4 @@
 package nl.wessel.platform.A.Controller;
-
-
 import nl.wessel.platform.B.BusinessLogic.Payload.AuthenticationRequest;
 import nl.wessel.platform.B.BusinessLogic.Payload.AuthenticationResponse;
 import nl.wessel.platform.B.BusinessLogic.Utils.JwtUtil;
@@ -12,15 +10,16 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
 //@CrossOrigin
 @RestController
 public class AuthenticationController {
-
-    /*autowire authentionManager, userDetailService en jwtUtil*/
 
 
     private final AuthenticationManager authenticationManager;

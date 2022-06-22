@@ -2,6 +2,7 @@ package nl.wessel.platform.B.BusinessLogic.Service;
 
 
 import nl.wessel.platform.B.BusinessLogic.DTO.User.UserDto;
+import nl.wessel.platform.B.BusinessLogic.Exception.UsernameNotFound;
 import nl.wessel.platform.B.BusinessLogic.Model.Authority;
 import nl.wessel.platform.B.BusinessLogic.Model.User;
 import nl.wessel.platform.B.BusinessLogic.Utils.RandomStringGenerator;
