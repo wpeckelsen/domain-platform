@@ -1,4 +1,4 @@
-package nl.wessel.platform.B.BusinessLogic.Config;
+package nl.wessel.platform.B.BusinessLogic.Configuration;
 
 
 import nl.wessel.platform.B.BusinessLogic.Filter.JwtRequestFilter;
