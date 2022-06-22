@@ -88,4 +88,5 @@ public class Publisher {
     public void setMarkets(List<Market> markets) {
         this.markets = markets;
     }
+
 }

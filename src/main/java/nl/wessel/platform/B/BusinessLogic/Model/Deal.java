@@ -26,7 +26,7 @@ public class Deal {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client_clientID")
-    @MapsId("clientID")
+    @MapsId(value = "clientID")
     private Client client;
 
     @ManyToOne
