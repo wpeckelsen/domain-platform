@@ -24,7 +24,7 @@ public class ClientContr {
 
 
     //    CREATE
-    @GetMapping("/new")
+    @PostMapping("/new")
     public ResponseEntity<CreatedClient> newClient(@RequestBody CreateClient client) {
         final CreatedClient createdClient = clientService.newClient(client);
         return ResponseEntity.ok().body(createdClient);

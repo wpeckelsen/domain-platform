@@ -20,7 +20,7 @@ public class MarketContr {
 
 
     //    CREATE
-    @GetMapping("/new")
+    @PostMapping("/new")
     public ResponseEntity<CreatedMarket> newMarket(@RequestBody CreateMarket market) {
         final CreatedMarket createdMarket = marketService.newMarket(market);
         return ResponseEntity.ok().body(createdMarket);

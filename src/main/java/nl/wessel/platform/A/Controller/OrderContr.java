@@ -21,7 +21,7 @@ public class OrderContr {
 
 
     //    CREATE
-    @GetMapping("/new")
+    @PostMapping("/new")
     public ResponseEntity<CreatedOrder> newOrder(@RequestBody CreateOrder order) {
         final CreatedOrder createdOrder = orderService.newOrder(order);
         return ResponseEntity.ok().body(createdOrder);

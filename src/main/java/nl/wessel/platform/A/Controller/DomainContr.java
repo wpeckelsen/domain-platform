@@ -20,7 +20,7 @@ public class DomainContr {
 
 
     //    CREATE
-    @GetMapping("/new")
+    @PostMapping("/new")
     public ResponseEntity<CreatedDomain> newDomain(@RequestBody CreateDomain domain) {
         final CreatedDomain createdDomain = domainService.newDomain(domain);
         return ResponseEntity.ok().body(createdDomain);

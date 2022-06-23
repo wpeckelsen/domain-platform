@@ -17,7 +17,7 @@ public class DealContr {
 
 
     //    CREATE
-    @GetMapping("/new")
+    @PostMapping("/new")
     public ResponseEntity<CreatedDeal> newDeal(@RequestBody CreateDeal deal) {
         final CreatedDeal createdDeal = dealService.newDeal(deal);
         return ResponseEntity.ok().body(createdDeal);

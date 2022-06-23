@@ -21,7 +21,7 @@ public class PublisherContr {
 
 
     //    CREATE
-    @GetMapping("/new")
+    @PostMapping("/new")
     public ResponseEntity<CreatedPublisher> newPublisher(@RequestBody CreatePublisher publisher) {
         final CreatedPublisher createdPublisher = publisherService.newPublisher(publisher);
         return ResponseEntity.ok().body(createdPublisher);
