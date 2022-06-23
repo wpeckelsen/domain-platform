@@ -2,7 +2,7 @@ package nl.wessel.platform.B.BusinessLogic.DTO.Domain;
 
 public class CreateDomain {
 
-    //    private Long domainID;
+
     private String name;
     private String TLD;
     private String category;
