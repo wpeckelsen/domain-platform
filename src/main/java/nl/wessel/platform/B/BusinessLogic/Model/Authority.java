@@ -5,7 +5,6 @@ import java.io.Serializable;
 
 @Entity
 @IdClass(AuthKey.class)
-@Table(name = "authorities")
 public class Authority implements Serializable {
 
     @Id
