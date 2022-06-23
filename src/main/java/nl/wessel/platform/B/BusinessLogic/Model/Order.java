@@ -22,17 +22,17 @@ public class Order {
     @Column(length = 50)
     private String language;
 
+//
+//    @ManyToOne
+//    Client client;
 
-    @ManyToOne
-    Client client;
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
+//    public Client getClient() {
+//        return client;
+//    }
+//
+//    public void setClient(Client client) {
+//        this.client = client;
+//    }
 
     public Long getOrderID() {
         return orderID;

@@ -19,9 +19,14 @@ public class Domain {
     private String category;
 
     private int price;
+//
+//    @ManyToOne
+//    private Publisher publisher;
+//
+//
 
-    @ManyToOne
-    private Publisher publisher;
+
+
 
     public Long getDomainID() {
         return domainID;
@@ -62,12 +67,12 @@ public class Domain {
     public void setPrice(int price) {
         this.price = price;
     }
-
-    public Publisher getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(Publisher publisher) {
-        this.publisher = publisher;
-    }
+//
+//    public Publisher getPublisher() {
+//        return publisher;
+//    }
+//
+//    public void setPublisher(Publisher publisher) {
+//        this.publisher = publisher;
+//    }
 }

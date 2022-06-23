@@ -18,10 +18,10 @@ public class CreatedDeal {
 
 
 //    TODO
-    private Client client;
-
-    private Publisher publisher;
-    private Domain domain;
+//    private Client client;
+//
+//    private Publisher publisher;
+//    private Domain domain;
 
 
     public Long getDealID() {
@@ -64,27 +64,27 @@ public class CreatedDeal {
         this.terms = terms;
     }
 
-    public Publisher getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(Publisher publisher) {
-        this.publisher = publisher;
-    }
-
-    public Domain getDomain() {
-        return domain;
-    }
-
-    public void setDomain(Domain domain) {
-        this.domain = domain;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
+//    public Publisher getPublisher() {
+//        return publisher;
+//    }
+//
+//    public void setPublisher(Publisher publisher) {
+//        this.publisher = publisher;
+//    }
+//
+//    public Domain getDomain() {
+//        return domain;
+//    }
+//
+//    public void setDomain(Domain domain) {
+//        this.domain = domain;
+//    }
+//
+//    public Client getClient() {
+//        return client;
+//    }
+//
+//    public void setClient(Client client) {
+//        this.client = client;
+//    }
 }

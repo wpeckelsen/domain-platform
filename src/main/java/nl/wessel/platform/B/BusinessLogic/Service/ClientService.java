@@ -32,9 +32,9 @@ public class ClientService {
         createdClient.setName(client.getName());
         createdClient.setPassword(client.getPassword());
 
-        createdClient.setMarkets(client.getMarkets());
-        createdClient.setOrders(client.getOrders());
-        createdClient.setDeals(client.getDeals());
+//        createdClient.setMarkets(client.getMarkets());
+//        createdClient.setOrders(client.getOrders());
+//        createdClient.setDeals(client.getDeals());
 
         return createdClient;
 

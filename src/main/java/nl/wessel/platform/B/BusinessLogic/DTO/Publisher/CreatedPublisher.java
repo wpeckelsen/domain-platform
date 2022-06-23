@@ -11,9 +11,9 @@ public class CreatedPublisher {
     private String name;
     private String email;
     private String password;
-    private List<Deal> deals;
-    private List<Order> orders;
-    private List<Market> markets;
+//    private List<Deal> deals;
+//    private List<Order> orders;
+//    private List<Market> markets;
 
     public Long getPublisherID() {
         return publisherID;
@@ -39,22 +39,22 @@ public class CreatedPublisher {
     public void setPassword(String password) {
         this.password = password;
     }
-    public List<Deal> getDeals() {
-        return deals;
-    }
-    public void setDeals(List<Deal> deals) {
-        this.deals = deals;
-    }
-    public List<Order> getOrders() {
-        return orders;
-    }
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
-    public List<Market> getMarkets() {
-        return markets;
-    }
-    public void setMarkets(List<Market> markets) {
-        this.markets = markets;
-    }
+//    public List<Deal> getDeals() {
+//        return deals;
+//    }
+//    public void setDeals(List<Deal> deals) {
+//        this.deals = deals;
+//    }
+//    public List<Order> getOrders() {
+//        return orders;
+//    }
+//    public void setOrders(List<Order> orders) {
+//        this.orders = orders;
+//    }
+//    public List<Market> getMarkets() {
+//        return markets;
+//    }
+//    public void setMarkets(List<Market> markets) {
+//        this.markets = markets;
+//    }
 }

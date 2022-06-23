@@ -22,15 +22,15 @@ public class Publisher {
     @Column(length = 500)
     private String password;
 
-    @OneToMany(mappedBy = "client")
-    @JsonIgnore
-    private Collection<Deal> deals;
-
-    @OneToMany
-    private List<Order> orders;
-
-    @ManyToMany
-    private List<Market> markets;
+//    @OneToMany(mappedBy = "client")
+//    @JsonIgnore
+//    private Collection<Deal> deals;
+//
+//    @OneToMany
+//    private List<Order> orders;
+//
+//    @ManyToMany
+//    private List<Market> markets;
 
 
     public Long getPublisherID() {
@@ -65,28 +65,28 @@ public class Publisher {
         this.password = password;
     }
 
-    public Collection<Deal> getDeals() {
-        return deals;
-    }
-
-    public void setDeals(List<Deal> deals) {
-        this.deals = deals;
-    }
-
-    public List<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
-
-    public List<Market> getMarkets() {
-        return markets;
-    }
-
-    public void setMarkets(List<Market> markets) {
-        this.markets = markets;
-    }
+//    public Collection<Deal> getDeals() {
+//        return deals;
+//    }
+//
+//    public void setDeals(List<Deal> deals) {
+//        this.deals = deals;
+//    }
+//
+//    public List<Order> getOrders() {
+//        return orders;
+//    }
+//
+//    public void setOrders(List<Order> orders) {
+//        this.orders = orders;
+//    }
+//
+//    public List<Market> getMarkets() {
+//        return markets;
+//    }
+//
+//    public void setMarkets(List<Market> markets) {
+//        this.markets = markets;
+//    }
 
 }

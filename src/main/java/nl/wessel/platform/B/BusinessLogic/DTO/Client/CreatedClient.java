@@ -14,10 +14,10 @@ public class CreatedClient {
     private String password;
 
 //    TODO variables
-    private Collection<Deal> deals;
-
-    private List<Order> orders;
-    private List<Market> markets;
+//    private Collection<Deal> deals;
+//
+//    private List<Order> orders;
+//    private List<Market> markets;
 
 
 
@@ -48,22 +48,22 @@ public class CreatedClient {
     public void setPassword(String password) {
         this.password = password;
     }
-    public Collection<Deal> getDeals() {
-        return deals;
-    }
-    public void setDeals(Collection<Deal> deals) {
-        this.deals = deals;
-    }
-    public List<Order> getOrders() {
-        return orders;
-    }
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
-    public List<Market> getMarkets() {
-        return markets;
-    }
-    public void setMarkets(List<Market> markets) {
-        this.markets = markets;
-    }
+//    public Collection<Deal> getDeals() {
+//        return deals;
+//    }
+//    public void setDeals(Collection<Deal> deals) {
+//        this.deals = deals;
+//    }
+//    public List<Order> getOrders() {
+//        return orders;
+//    }
+//    public void setOrders(List<Order> orders) {
+//        this.orders = orders;
+//    }
+//    public List<Market> getMarkets() {
+//        return markets;
+//    }
+//    public void setMarkets(List<Market> markets) {
+//        this.markets = markets;
+//    }
 }

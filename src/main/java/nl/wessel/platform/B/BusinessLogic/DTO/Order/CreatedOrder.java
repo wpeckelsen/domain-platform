@@ -19,7 +19,7 @@ public class CreatedOrder {
     private String language;
 
 //    TODO
-    private Market market;
+//    private Market market;
 
 
 
@@ -71,11 +71,11 @@ public class CreatedOrder {
         this.language = language;
     }
 
-    public Market getMarket() {
-        return market;
-    }
-
-    public void setMarket(Market market) {
-        this.market = market;
-    }
+//    public Market getMarket() {
+//        return market;
+//    }
+//
+//    public void setMarket(Market market) {
+//        this.market = market;
+//    }
 }
